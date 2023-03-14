@@ -12,9 +12,15 @@
 
 ## Introduction
 
-<!-- TODO nf-core: Write a 1-2 sentence summary of what data the pipeline is for and what it does -->
+**nf-core/germlinewgs** is a bioinformatics best-practice analysis pipeline for Nextflow implementation of [54gene-wgs-germline pipeline](https://54gene-wgs-germline.readthedocs.io/en/latest/?badge=latest). Similar to the original, this pipeline takes paired-end short-read germline whole-genome sequencing data and will output gVCFs and multi-sample, joint-called VCF. 
 
-**nf-core/germlinewgs** is a bioinformatics best-practice analysis pipeline for Nextflow implementation of 54gene-wgs-germline pipeline.
+High-level features:
+- Read filtering and trimming
+- Read alignment, deduplication, and BQSR
+- Variant calling and filtering
+- Joint-genotyping 
+- Sex discordance and relatedness assessment
+- Generate MultiQC reports
 
 The pipeline is built using [Nextflow](https://www.nextflow.io), a workflow tool to run tasks across multiple compute infrastructures in a very portable manner. It uses Docker/Singularity containers making installation trivial and results highly reproducible. The [Nextflow DSL2](https://www.nextflow.io/docs/latest/dsl2.html) implementation of this pipeline uses one container per process which makes it much easier to maintain and update software dependencies. Where possible, these processes have been submitted to and installed from [nf-core/modules](https://github.com/nf-core/modules) in order to make them available to all nf-core pipelines, and to everyone within the Nextflow community!
 
